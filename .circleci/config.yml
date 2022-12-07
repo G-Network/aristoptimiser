@@ -34,7 +34,6 @@ jobs:
             pwd
             which python
             ls -al
-#            sudo pip install pipenv
             sudo pip install --upgrade pip
             pipenv install
             ls -al
