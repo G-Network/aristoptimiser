@@ -39,7 +39,7 @@ jobs:
             ls -al
 
       - save_cache:
-          key: python36-dependencies-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+          key: python311-dependencies-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
           paths:
             - "/usr/local/bin"
             - "/usr/local/lib/python3.11/site-packages"
