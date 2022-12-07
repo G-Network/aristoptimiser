@@ -38,11 +38,7 @@ jobs:
             pipenv install
             ls -al
 
-      - save_cache:
-          key: python311-dependencies-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
-          paths:
-            - "/usr/local/bin"
-            - "/usr/local/lib/python3.11/site-packages"
+
 
       - run:
           name: run unit tests
