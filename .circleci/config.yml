@@ -16,7 +16,7 @@ jobs:
   build:
     docker:
 
-      - image: circleci/python:3.9.15
+      - image: cimg/python:3.11.0
         environment:
           PIPENV_VENV_IN_PROJECT: true
 
@@ -42,7 +42,7 @@ jobs:
           key: python36-dependencies-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
           paths:
             - "/usr/local/bin"
-            - "/usr/local/lib/python3.9/site-packages"
+            - "/usr/local/lib/python3.11/site-packages"
 
       - run:
           name: run unit tests
